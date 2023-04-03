@@ -1,125 +1,81 @@
-*{
-    margin:0px;
-    padding:0px;
-}
-html,body{
-    height:100%
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+body {
+	background: #f9f9f9;
+	font-family: "Roboto", sans-serif;
 }
 
-body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.main-content {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
-/*----------App----------*/
-h3{
+.note
+{
     text-align: center;
-   margin-bottom: 1rem;
-   margin-top: -40px;
+    height: 80px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
 }
-/*--------- Game------*/
-.container{
-   
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-template-rows:repeat(4,0.3fr);    
-    gap: 1em;
-    
+.form-content
+{
+    padding: 2%;
+    border: 1px solid #ced4da;
+    margin-bottom: 1%;
 }
-/*-----------card--------------*/
-.card{
-height: 80px;
-width: 70px;
-border-radius: 20px;
-
-   
-    background-color: rgba(173, 167, 171, 0.982);
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    
-    box-shadow: 2px 2px 2px rgb(222, 218, 218);
-    transform:rotateY(180deg);
-    animation:1s hideCard linear;
-    transition: transform 0.5s;
-}
-@keyframes hideCard{
-    0%{
-        transform: rotateY(0);
-    }
     100%{
         transform: rotateY(180deg);
     }
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
 }
-.card img{
-    transform:scale(0);
-    animation:1s hideImg linear;
-    transition: transform 0.5s;
 
+
+
+.table {
+	border-spacing: 0 2px;
+	border-collapse: separate;
 }
 @keyframes hideImg{
     0%{
         transform: scale(0);
     }
-    100%{
-        transform: scale(0);
-    }
+.table thead tr th:nth-last-child(1),
+.table thead tr td:nth-last-child(1),
+.table tbody tr th:nth-last-child(1),
+.table tbody tr td:nth-last-child(1) {
+	text-align: center;
 }
-.cardactiveactive{
-     transform: rotateY(0);
-     height: 80px;
-     width: 70px;
-     border-radius: 20px;
+.table tbody tr {
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+.table tbody tr td {
+	background: #fff;
+}
+.table tbody tr td:nth-child(1) {
+	border-radius: 5px 0 0 5px;
+}
+.table tbody tr td:nth-last-child(1) {
+	border-radius: 0 5px 5px 0;
+}
 
+.user-info {
+	display: flex;
+	align-items: center;
 }
-
-.cardactiveactive img{
-    transform: scale(1); 
-    height: 80px;
-width: 70px;
-border-radius: 20px;
-   
-}
-.cardactivecorrect {
-    background-color: rgb(255, 255, 255);
-    height: 80px;
-width: 70px;
-border-radius: 20px;
-}
-.cardactivecorrect img{
-    transform: scale(1);
-
-    transition: transform 0.5s;
-    opacity: 0;
-    height: 80px;
-width: 70px;
-border-radius: 20px;
-}
-.cardactivewrong {
-    height: 80px;
-width: 70px;
-border-radius: 20px;
-}
-.cardactivewrong img{
-    transform: scale(1);
-    height: 80px;
-width: 70px;
-border-radius: 20px;
-}
-.end{
-    display:flex;
-}
-.end h3{
-    padding-top: 70px;
-    padding-left: 50px;
-}
-.end button{
-    
-    margin:20px;
-    padding:1px 30px;
-    border:0px;
-    background-color: pink;
-    border-radius: 30px;
-    height:35px
+.user-info__img img {
+	margin-right: 15px;
+	height: 55px;
+	width: 55px;
+	border-radius: 45px;
+	border: 3px solid #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
